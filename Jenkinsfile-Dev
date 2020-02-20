@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('createFolder') {
             steps {
-                mkdir backup
+            cd \
+                mkdir pythonBackup
             }
         }
     }
