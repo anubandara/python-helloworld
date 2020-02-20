@@ -1,10 +1,7 @@
-pipeline {
-    agent any
-    stages {
-        stage('install') {
-            steps {
-		git clone C:\backup\
-            }
-        }
+node {
+    sh 'ls -l'
+    dir ('foo') {
+        writeFile file:'dummy', text:''
     }
+    sh 'ls -l'
 }
