@@ -1,7 +1,13 @@
-node {
-    sh 'ls -l'
-    dir ('foo') {
-        writeFile file:'dummy', text:''
+pipeline{
+    stages{
+        stage("Message"){
+            echo "Starting...."
+        }
+        stage("createFolder"){
+            mkdir tetsPipeline
+        }
+        stage("Clone"){
+            sh 'python --version'
+        }
     }
-    sh 'ls -l'
 }
