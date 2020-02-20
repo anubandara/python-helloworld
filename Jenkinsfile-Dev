@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('install') {
             steps {
-                echo "Installing..."
-                mkdir createFolder
+                sh 'git clone https://github.com/anubandara/python-helloworld.git'
             }
         }
     }
