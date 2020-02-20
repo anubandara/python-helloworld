@@ -1,14 +1,11 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("Message"){
-            echo "Starting...."
-        }
-        stage("createFolder"){
-            mkdir tetsPipeline
-        }
-        stage("Clone"){
-            sh 'python --version'
+    stages {
+        stage('install') {
+            steps {
+                echo "Installing..."
+                mkdir createFolder
+            }
         }
     }
 }
